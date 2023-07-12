@@ -20,7 +20,7 @@ body{
 
 .game-container{
     background-color: #403031;
-    min-height: 645px;
+    height: 645px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,6 @@ body{
 
 .card{
     margin-bottom: -300px;
-    
     transition: 1s;
 }
 
@@ -93,6 +92,36 @@ body{
 }
 
  
+.name-container{
+    background-color: #403031 ;
+    
+}
+
+
+.you-img{
+    width: 40px;
+    height: 20px;
+    margin: 30px;
+    width: 50px;
+    height: 25px;
+    background-color: gray;
+    border: 3px solid wheat;
+    padding: 10px;
+   
+}
+.cpu-img{
+    width: 40px;
+    height: 25px;
+    margin: 30px;
+    margin-left: 450px;
+    width: 50px;
+    height: 25px;
+    background-color: gray;
+    border: 3px solid wheat;
+    padding: 10px;
+   
+}
+
 
 
 .playerRecord{
