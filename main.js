@@ -52,20 +52,20 @@ function playGame(playerChoice,computerChoice){
     if (playerChoice === 'rock' && computerChoice === 'scissors' || playerChoice === 'paper' && computerChoice === 'rock' || playerChoice === 'scissors' && computerChoice === 'paper'){
         
         playerScore += 1;
-        document.querySelector(".playerWin").innerHTML = `${playerChoice} Beats ${computerChoice}, You Win!`
+        document.querySelector(".playerWin").innerHTML = `${playerChoice} Beats ${computerChoice}, <br>You Win The Round!`
         recordScore()
     }
     else if (playerChoice === computerChoice){
         
         playerScore += 0;
         computerScore += 0;
-        document.querySelector(".playerWin").innerHTML = `${playerChoice} Does Not Beat ${computerChoice}, Tie Game!`
+        document.querySelector(".playerWin").innerHTML = `${playerChoice} Does Not Beat ${computerChoice}, <br>Draw/Tie Round!`
         recordScore()
     }
     else{
         
         computerScore += 1;
-        document.querySelector(".playerWin").innerHTML = `${computerChoice} Beats ${playerChoice}, Computer Wins!`
+        document.querySelector(".playerWin").innerHTML = `${computerChoice} Beats ${playerChoice}, <br>Computer Wins The Round!`
         recordScore()
     }
 }
@@ -101,15 +101,16 @@ function restartGame(){
 
 function winnerText(){
     if (playerScore > computerScore){
-        document.querySelector(".modal-result").innerHTML = "You Win! The Entire Game!"
+        document.querySelector(".modal-result").innerHTML = `You Win! The Entire Game!<p>${playerScore} - ${computerScore}</p>`
+        s
 
     }
     else if (playerScore < computerScore){
-        document.querySelector(".modal-result").innerHTML = "Computer Wins! The Entire Game!"
+        document.querySelector(".modal-result").innerHTML = `Computer Wins! The Entire Game!<p>${playerScore} - ${computerScore}</p> `
 
     }
     else{
-        document.querySelector(".modal-result").innerHTML = "Draw/Tie Game!"
+        document.querySelector(".modal-result").innerHTML = `Draw/Tie Game!<p>${playerScore} - ${computerScore}</p> `
     }
 }
 recordScore()
