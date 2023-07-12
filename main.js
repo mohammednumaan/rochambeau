@@ -1,8 +1,5 @@
 // selecting elements
 
-
-const playerText = document.querySelector(".player")
-const computerText = document.querySelector(".computer")
 const choiceBtn = Array.from(document.querySelectorAll(".choiceButton"))
 const playerscore = document.querySelector(".playerRecord")
 const computerscore = document.querySelector(".computerRecord")
@@ -37,8 +34,7 @@ choiceBtn.forEach(button => button.addEventListener ('click', (e) => {
         openEndgameModal() 
         winnerText()
     }
-    updateScore()
-    restart.addEventListener('click',restartGame)
+    
     
 }));
 
@@ -59,20 +55,20 @@ function playGame(playerChoice,computerChoice){
     if (playerChoice === 'rock' && computerChoice === 'scissors' || playerChoice === 'paper' && computerChoice === 'rock' || playerChoice === 'scissors' && computerChoice === 'paper'){
         
         playerScore += 1;
-        document.querySelector(".playerWin").innerHTML = `${playerChoice} Beats ${computerChoice}, <br>You Win The Round!`
+        document.querySelector(".win").innerHTML = `${playerChoice} Beats ${computerChoice}, <br>You Win The Round!`
         updateScore()
     }
     else if (playerChoice === computerChoice){
         
         playerScore += 0;
         computerScore += 0;
-        document.querySelector(".playerWin").innerHTML = `${playerChoice} Does Not Beat ${computerChoice}, <br>Draw/Tie Round!`
+        document.querySelector(".win").innerHTML = `${playerChoice} Does Not Beat ${computerChoice}, <br>Draw/Tie Round!`
         updatecore()
     }
     else{
         
         computerScore += 1;
-        document.querySelector(".playerWin").innerHTML = `${computerChoice} Beats ${playerChoice}, <br>Computer Wins The Round!`
+        document.querySelector(".win").innerHTML = `${computerChoice} Beats ${playerChoice}, <br>Computer Wins The Round!`
         updateScore()
     }
 }
@@ -101,8 +97,6 @@ function isGameOver(){
 function openEndgameModal() {
     modal.classList.add('active')
     overlay.classList.add('active')
-    
-    
 }
 
 
@@ -131,11 +125,14 @@ function winnerText(){
 function restartGame(){
     playerScore=0
     computerScore=0
-    updateScore()
     modal.classList.remove('active')
     overlay.classList.remove('active')
-    document.querySelector(".playerWin").innerHTML = ""
+    document.querySelector(".win").innerHTML = ""
+    updateScore()
 }
+
+updateScore()
+restart.addEventListener('click',restartGame)
 
 
 

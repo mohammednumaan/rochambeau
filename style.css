@@ -162,6 +162,14 @@ body{
 
 /* MODAL */
 
+.win{
+    margin-left: -720px;
+    margin-top: -10px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+}
 
 .modal {
     font-family: sans-serif;
@@ -227,5 +235,6 @@ body{
     border-radius: 12px;
     font-family: sans-serif;  
 }
+
 
 
