@@ -1,3 +1,6 @@
+// selecting elements
+
+
 const playerText = document.querySelector(".player")
 const computerText = document.querySelector(".computer")
 const choiceBtn = Array.from(document.querySelectorAll(".choiceButton"))
@@ -5,38 +8,42 @@ const playerscore = document.querySelector(".playerRecord")
 const computerscore = document.querySelector(".computerRecord")
 const userResult = document.querySelector(".userResult img")
 const computerResult = document.querySelector(".computerResult img")
-const playerWin = document.querySelector(".playerWin")
+const playerWin = document.querySelector(".win")
 const modal = document.querySelector(".modal")
 const overlay =document.querySelector(".overlay")
 const restart = document.querySelector(".play-again")
 const modal_result = document.querySelector(".modal-result")
 
 
+// declaration
 
 let playerChoice;
 let computerChoice;
-
 let playerScore = 0;
 let computerScore = 0;
 
 
+// events 
+
 
 choiceBtn.forEach(button => button.addEventListener ('click', (e) => {
 
+    
     let playersrc = e.target.src
     userResult.src = playersrc
+
     playGame(button.id,getComputerChoice())
     if (isGameOver()){
         openEndgameModal() 
         winnerText()
     }
+    updateScore()
     restart.addEventListener('click',restartGame)
-
-    
-
     
 }));
-isGameOver()
+
+
+// main game logic 
 
 
 function getComputerChoice(){
@@ -53,33 +60,42 @@ function playGame(playerChoice,computerChoice){
         
         playerScore += 1;
         document.querySelector(".playerWin").innerHTML = `${playerChoice} Beats ${computerChoice}, <br>You Win The Round!`
-        recordScore()
+        updateScore()
     }
     else if (playerChoice === computerChoice){
         
         playerScore += 0;
         computerScore += 0;
         document.querySelector(".playerWin").innerHTML = `${playerChoice} Does Not Beat ${computerChoice}, <br>Draw/Tie Round!`
-        recordScore()
+        updatecore()
     }
     else{
         
         computerScore += 1;
         document.querySelector(".playerWin").innerHTML = `${computerChoice} Beats ${playerChoice}, <br>Computer Wins The Round!`
-        recordScore()
+        updateScore()
     }
 }
 
-function recordScore(){
+
+// updates score
+
+
+function updateScore(){
     document.querySelector(".playerRecord").innerHTML = playerScore;
     document.querySelector(".computerRecord").innerHTML = computerScore;
 
 }
 
+// checks the max points
+
+
 function isGameOver(){
     return playerScore === 5 || computerScore === 5
 }
 
+
+// opens play again modal
 
 
 function openEndgameModal() {
@@ -87,17 +103,10 @@ function openEndgameModal() {
     overlay.classList.add('active')
     
     
-  }
-  
-
-function restartGame(){
-    playerScore=0
-    computerScore=0
-    recordScore()
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
-    document.querySelector(".playerWin").innerHTML = ""
 }
+
+
+// shows the winner after max points is reached
 
 function winnerText(){
     if (playerScore > computerScore){
@@ -113,7 +122,22 @@ function winnerText(){
         document.querySelector(".modal-result").innerHTML = `Draw/Tie Game!<p>${playerScore} - ${computerScore}</p> `
     }
 }
-recordScore()
+
+  
+
+// resets the game settings
+
+
+function restartGame(){
+    playerScore=0
+    computerScore=0
+    updateScore()
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+    document.querySelector(".playerWin").innerHTML = ""
+}
+
+
 
 
 
