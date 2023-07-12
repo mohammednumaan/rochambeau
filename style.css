@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header-container{
+    background-color:#403031;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+.header-img{
+    width: 350px;
+    height: 50px;
+}
+
+.game-container{
+    background-color:gray;
+    min-height: 632px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    
+}
+
+#rock,
+#paper,
+#scissors{
+    width: 80px;
+    height: 150px;
+    
+}
+
+.game-container button{
+    background-color: #403031;
+    border-color: white;
+    border-width: 4px;
+    
+}
+
+.card{
+    margin-bottom: -400px;
+    transition: 1s;
+}
+
+.card:hover{
+    transform: scale(1.3);
+}
