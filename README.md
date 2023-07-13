@@ -19,7 +19,8 @@ The main objective of this project is to allow the user to play a simple Rock-Pa
 
 # Concept Map
 
-![Rochambeau Concept Map](https://github.com/mohammednumaan/rochambeau/assets/138296610/9ccc63c8-759b-4f7b-9dad-73a0b27bafd8)
+![Rochambeau Concept Map](https://github.com/mohammednumaan/rochambeau/assets/138296610/1eea7d5e-354b-4579-84b5-1a60ed29c019)
+
 
 # DOM Element Properties and Methods Used 
 
