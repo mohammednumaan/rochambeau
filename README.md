@@ -19,7 +19,7 @@ The main objective of this project is to allow the user to play a simple Rock-Pa
 
 # Concept Map
 
-![Rochambeau Concept Map](https://github.com/mohammednumaan/rochambeau/assets/138296610/fdc80181-7cd6-44b4-9f53-3e1dfcbed620)
+![Rochambeau Concept Map](https://github.com/mohammednumaan/rochambeau/assets/138296610/9ccc63c8-759b-4f7b-9dad-73a0b27bafd8)
 
 # DOM Element Properties and Methods Used 
 
@@ -35,6 +35,7 @@ The main objective of this project is to allow the user to play a simple Rock-Pa
 
 <ul>
   <li>This game is not supported on mobile, it wasn't meant to make it responsive across platforms. The main objective of this project was to implement DOM Manipulation Properties and Methods and <b>NOT</b> to make it responsive!</li>
+  <li>Currently, there is no feature where the player can select any other option in the final win-lose-play-again screen.</li>
   <li>All the assets in this project was found through Google Images. The fonts used in this project is called "Summer Pixel Wide 22 by <b>Suolahti Type</b> from https://www.fontspace.com/</li>
 </ul>
 
