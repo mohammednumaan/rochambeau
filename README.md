@@ -1,5 +1,7 @@
 # rochambeau
 
+![rochambeau-title](https://github.com/mohammednumaan/rochambeau/assets/138296610/7bc7f75d-03ad-42f3-a3c7-1b4046652413)
+
 # Introduction
 
 The main objective of this project is to allow the user to play a simple Rock-Paper-Scissors game against a randomly generated choice by the CPU.
