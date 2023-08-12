@@ -63,7 +63,7 @@ function playGame(playerChoice,computerChoice){
         playerScore += 0;
         computerScore += 0;
         document.querySelector(".win").innerHTML = `${playerChoice} Does Not Beat ${computerChoice}, <br>Draw/Tie Round!`
-        updatecore()
+        updateScore()
     }
     else{
         
@@ -105,7 +105,7 @@ function openEndgameModal() {
 function winnerText(){
     if (playerScore > computerScore){
         document.querySelector(".modal-result").innerHTML = `You Win! The Entire Game!<p>${playerScore} - ${computerScore}</p>`
-        s
+        
 
     }
     else if (playerScore < computerScore){
@@ -128,6 +128,8 @@ function restartGame(){
     modal.classList.remove('active')
     overlay.classList.remove('active')
     document.querySelector(".win").innerHTML = ""
+    userResult.src = './assets/rock.png'
+    computerResult.src = './assets/rock.png'
     updateScore()
 }
 
